@@ -46,11 +46,11 @@ button:hover {
 }
 
 .main-content {
-  margin-left: 250px; /* Width of the sidebar */
+  margin-left: 150px;
   padding: 20px;
   flex-grow: 1;
 }
 
 .sidebar-collapsed .main-content {
-  margin-left: 80px; /* Width of the sidebar when collapsed */
+  margin-left: 80px;
 }

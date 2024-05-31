@@ -8,6 +8,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import './App.css';
 
 function App() {
+  
   const [collapsed, setCollapsed] = useState(false);
 
   const handleSidebarToggle = () => {

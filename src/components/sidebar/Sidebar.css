@@ -1,40 +1,66 @@
 .sidebar-container {
-    display: flex;
-  }
-  
-  .sidebar {
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    transition: width 0.3s;
-  }
-  
-  .sidebar.collapsed {
-    width: 80px;
-  }
-  
-  .sidebar .menu-icon {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .menu-item {
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .menu-item:hover {
-    background-color: #ffdb58;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  
-  .menu-item .icon {
-    margin-right: 10px;
-  }
-  
+  display: flex;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  background-color: #000000;
+  color: white;
+  transition: width 0.5s;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-closed .sidebar {
+  width: 60px;
+}
+
+.sidebar .menu-icon {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-item {
+  /* padding: 10px; */
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: #ffdb58;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.menu-item .icon {
+  margin-right: 10px;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
