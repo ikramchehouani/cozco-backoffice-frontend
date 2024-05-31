@@ -1,0 +1,36 @@
+.articles-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.articles-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.articles-table th,
+.articles-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.articles-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.articles-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.articles-table tr:hover {
+  background-color: #ddd;
+}
+
+.articles-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -7,6 +7,7 @@ const Login = () => {
   const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
+    
     event.preventDefault();
     if (!email || !password) {
       setError('Please fill in all fields');

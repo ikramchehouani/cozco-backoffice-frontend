@@ -40,3 +40,17 @@ button {
 button:hover {
   background-color: #218838;
 }
+
+.App {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 250px; /* Width of the sidebar */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.sidebar-collapsed .main-content {
+  margin-left: 80px; /* Width of the sidebar when collapsed */
+}
