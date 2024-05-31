@@ -12,42 +12,38 @@
 }
 
 .sidebar.collapsed {
-  width: 80px;
-}
-
-.sidebar-closed .sidebar {
   width: 60px;
 }
 
 .sidebar .menu-icon {
   padding: 10px;
   cursor: pointer;
+  font-size: 1.5em;
 }
 
 .menu-item {
-  /* padding: 10px; */
   color: white;
   text-decoration: none;
-}
-
-.menu-item:hover {
-  background-color: #ffdb58;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
 }
 
 .menu-item .icon {
   margin-right: 10px;
 }
 
-.toggle-button {
-  background: none;
-  border: none;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
+/* Override the generated hover effect for menu items of react */
+.ps-menu-button {
+  background-color: inherit;
+}
+
+.ps-menu-button:hover {
+  background-color: inherit !important;
+}
+
+.menu-item:hover {
+  background-color: inherit;
 }
 
 .sidebar nav ul {
@@ -56,8 +52,13 @@
   margin: 0;
 }
 
+.sidebar nav ul li:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
 .sidebar nav ul li {
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .sidebar nav ul li a {

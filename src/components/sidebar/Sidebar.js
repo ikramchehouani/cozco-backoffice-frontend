@@ -1,15 +1,10 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaCog, FaColumns, FaThList, FaUsers } from 'react-icons/fa';
-import { Menu, MenuItem, ProSidebarProvider, SubMenu } from 'react-pro-sidebar';
-import styled from 'styled-components';
+import { Menu, MenuItem, ProSidebarProvider } from 'react-pro-sidebar';
 import './Sidebar.css';
 
-const Menuitem = styled(MenuItem)`
-`;
-
 const Sidebar = ({ collapsed, onToggle }) => {
-
   return (
     <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       <ProSidebarProvider>
@@ -17,14 +12,18 @@ const Sidebar = ({ collapsed, onToggle }) => {
           <AiOutlineMenu />
         </div>
         <Menu iconShape="square">
-          <Menuitem icon={<FaColumns />} href="/admin/dashboard">Tableau de bord</Menuitem>
-          <Menuitem icon={<FaUsers />} href="/employees">
+          <MenuItem className="menu-item" icon={<FaColumns />} href="/admin/dashboard">
+            Tableau de bord
+          </MenuItem>
+          <MenuItem className="menu-item" icon={<FaUsers />} href="/employees">
             Administrateurs
-          </Menuitem>
-          <Menuitem icon={<FaThList />} href="/admin/articles">
+          </MenuItem>
+          <MenuItem className="menu-item" icon={<FaThList />} href="/admin/articles">
             Articles
-          </Menuitem>
-          <Menuitem icon={<FaCog />}>Profile</Menuitem>
+          </MenuItem>
+          <MenuItem className="menu-item" icon={<FaCog />}>
+            Profile
+          </MenuItem>
         </Menu>
       </ProSidebarProvider>
     </div>
