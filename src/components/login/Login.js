@@ -6,18 +6,38 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
-    
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!email || !password) {
       setError('Please fill in all fields');
       return;
     }
-    console.log('Email:', email);
-    console.log('Password:', password);
-    setEmail('');
-    setPassword('');
-    setError('');
+
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/signin`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+
+      const data = await response.json();
+      console.log('Success:', data);
+      
+      setEmail('');
+      setPassword('');
+      setError('');
+      
+
+    } catch (error) {
+      console.error('Error:', error);
+      setError('Login failed. Please try again.');
+    }
   };
 
   return (

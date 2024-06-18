@@ -17,7 +17,7 @@ const Articles = () => {
     { field: 'title', headerName: 'Title', width: 200 },
     { field: 'content', headerName: 'Content', width: 400 },
     { field: 'author', headerName: 'Author', width: 150 },
-    { field: 'createdAt', headerName: 'Created At', width: 200, valueGetter: ({ value }) => new Date(value).toLocaleString() },
+    { field: 'createdAt', headerName: 'Created At', width: 200 },
   ];
 
   return (
