@@ -50,7 +50,7 @@ const Administrators = () => {
 
   const deleteAdministrator = (id) => {
     const token = localStorage.getItem('token');
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/backoffice-user/${id}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/delete-user/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`,
