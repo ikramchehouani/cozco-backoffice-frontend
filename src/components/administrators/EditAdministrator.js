@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 // import './EditArticle.css';
 
-const EditArticle = () => {
+const EditAdministrator = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { token } = useAuth();
@@ -105,4 +105,4 @@ const EditArticle = () => {
   );
 };
 
-export default EditArticle;
+export default EditAdministrator;
