@@ -1,96 +1,70 @@
-## Cozco Backoffice Frontend 
+# Getting Started with Create React App
 
-Welcome to the Cozco Backoffice Frontend! This project is your gateway to managing all the back-office operations for Cozco, built with the power of React and a dash of creativity.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run the following scripts to make your development experience cozy and productive:
+In the project directory, you can run:
 
-npm start
+### `npm start`
 
-Fire up the app in development mode with:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-npm start
+### `npm test`
 
-Open http://localhost:3000 in your favorite browser to see the magic happen. The app will automatically reload when you make changes, and any lint errors will be displayed in the console.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-npm test
-Launch the test runner with:
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-npm test
-Run interactive tests and ensure your code is as cozy as it can be! For more details on running tests, check out the testing documentation.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-npm run build
-Build the app for production with:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-npm run build
-This command bundles React in production mode, optimizing the build for the best performance. The output goes into the build folder, ready to be deployed. Your build will be minified, and the filenames will include hashes for optimal caching.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-npm run eject
-Feeling adventurous? eject gives you full control over the build tools and configuration:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-npm run eject
-Note: This is a one-way operation. Once you eject, you can't go back! Use this if you need customization beyond what Create React App offers out of the box.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
-Learn More
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Want to dive deeper? Here are some resources to learn more about the technologies powering this project:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-React documentation
-React Router documentation
-Code Splitting
+### Code Splitting
 
-Improve performance with code splitting. Learn more here.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Analyzing the Bundle Size
+### Analyzing the Bundle Size
 
-Keep your app lean by analyzing the bundle size. Learn more here.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Making a Progressive Web App
+### Making a Progressive Web App
 
-Take your app to the next level by making it a Progressive Web App. Learn more here.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Advanced Configuration
+### Advanced Configuration
 
-For advanced configuration options, see here.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## Deployment
+### Deployment
 
-Ready to share your work with the world? Learn about deployment here.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-npm run build fails to minify
+### `npm run build` fails to minify
 
-Troubleshoot build minification issues here.
-
-## Project Overview
-
-This repository serves as the frontend for Cozy's backoffice, providing a seamless and efficient interface for managing the backend operations. Whether you're handling articles, overseeing the dashboard, or managing user authentication, this project has got you covered.
-
-
-## Clone the repository:
-
-git clone git@github.com:ikramchehouani/cozco-backoffice-frontend.git
-cd cozy-backoffice-frontend
-Install dependencies:
-
-
-npm install
-
-Start the development server:
-
-npm start
-
-Open http://localhost:3000 to view the app.
-
-## Contribution
-
-We welcome contributions to make this project even cozier! Feel free to submit issues and pull requests.
-
-## License
-
-This project is licensed under the MIT License.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
