@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { useAuth } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,6 +18,7 @@ const Login = () => {
     }
 
     try {
+      console.log('Attempting to log in');
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/signin`, {
         method: 'POST',
         headers: {
@@ -28,11 +33,12 @@ const Login = () => {
 
       const data = await response.json();
       console.log('Success:', data);
-      
+
       setEmail('');
       setPassword('');
       setError('');
-      
+      login();
+      navigate('/admin');
 
     } catch (error) {
       console.error('Error:', error);

@@ -5,31 +5,46 @@ import Login from './components/login/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import Articles from './components/articles/Articles';
 import Sidebar from './components/sidebar/Sidebar';
+import PrivateRoute from './components/privateRoute';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import './App.css';
 
-function App() {
-  
+const AppContent = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   const handleSidebarToggle = () => {
     setCollapsed(!collapsed);
   };
 
   return (
-    <Router>
-      <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
-        <Sidebar collapsed={collapsed} onToggle={handleSidebarToggle} />
-        <div className="main-content">
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/admin" element={<Dashboard />}>
-              <Route path="articles" element={<Articles />} />
-            </Route>
-          </Routes>
-        </div>
+    <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
+      {isAuthenticated && <Sidebar collapsed={collapsed} onToggle={handleSidebarToggle} />}
+      <div className="main-content">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/admin/*" element={
+            <PrivateRoute>
+              <Routes>
+                <Route path="" element={<Dashboard />} />
+                <Route path="articles" element={<Articles />} />
+              </Routes>
+            </PrivateRoute>
+          } />
+        </Routes>
       </div>
-    </Router>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </AuthProvider>
   );
 }
 
