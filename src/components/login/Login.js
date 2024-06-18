@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, login } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,6 +43,9 @@ const Login = () => {
       setEmail('');
       setPassword('');
       setError('');
+
+      login(data.token);
+
       navigate('/admin');
 
     } catch (error) {
