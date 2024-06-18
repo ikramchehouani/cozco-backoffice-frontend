@@ -4,7 +4,8 @@ import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import Articles from './components/articles/Articles';
-import EditArticle from './components/articles/EditArticle'; // New import
+import EditArticle from './components/articles/EditArticle';
+import AddArticle from './components/articles/AddArticle';
 import Sidebar from './components/sidebar/Sidebar';
 import PrivateRoute from './components/privateRoute';
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -29,7 +30,8 @@ const AppContent = () => {
               <Routes>
                 <Route path="" element={<Dashboard />} />
                 <Route path="articles" element={<Articles />} />
-                <Route path="articles/:id" element={<EditArticle />} /> {/* New route */}
+                <Route path="articles/new" element={<AddArticle />} />
+                <Route path="articles/:id" element={<EditArticle />} />
               </Routes>
             </PrivateRoute>
           } />

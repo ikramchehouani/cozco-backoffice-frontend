@@ -25,6 +25,10 @@ const Articles = () => {
     navigate(`/admin/articles/${id}`);
   };
 
+  const handleAddArticle = () => {
+    navigate('/admin/articles/new');
+  };
+
   const columns = [
     { field: 'title', headerName: 'Titre', width: 200 },
     { field: 'description', headerName: 'Description', width: 400 },
@@ -56,6 +60,7 @@ const Articles = () => {
   return (
     <div className="articles-container">
       <h1>Articles</h1>
+      <button onClick={handleAddArticle} className="add-article-button">Add Article</button>
       <div style={{ height: 600, width: '100%' }}>
         <DataGrid
           rows={articles}
