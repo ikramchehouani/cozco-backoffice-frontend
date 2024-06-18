@@ -94,7 +94,7 @@ const Articles = () => {
     <div className="articles-container">
       <h1>Articles</h1>
       <button onClick={handleAddArticle} className="add-article-button">
-        <AddIcon /> Ajouter
+        <AddIcon />
       </button>
       <div style={{ height: 600, width: '100%' }}>
         <DataGrid
