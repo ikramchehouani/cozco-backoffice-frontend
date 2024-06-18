@@ -14,7 +14,7 @@ const Administrators = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/backoffice-users`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/users`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       }
