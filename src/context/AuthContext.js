@@ -12,20 +12,34 @@ export const AuthProvider = ({ children }) => {
     return savedAuthState === 'true';
   });
 
+  const [token, setToken] = useState(() => {
+    return localStorage.getItem('token');
+  });
+
   useEffect(() => {
     localStorage.setItem('isAuthenticated', isAuthenticated);
   }, [isAuthenticated]);
 
-  const login = () => {
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem('token', token);
+    } else {
+      localStorage.removeItem('token');
+    }
+  }, [token]);
+
+  const login = (newToken) => {
     setIsAuthenticated(true);
+    setToken(newToken);
   };
 
   const logout = () => {
     setIsAuthenticated(false);
+    setToken(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, token, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -37,7 +37,7 @@ const Login = () => {
       setEmail('');
       setPassword('');
       setError('');
-      login();
+      login(data.token);
       navigate('/admin');
 
     } catch (error) {

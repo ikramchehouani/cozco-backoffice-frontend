@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import './EditArticle.css';
 
 const EditArticle = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { token } = useAuth();
   const [article, setArticle] = useState({
     title: '',
     description: '',
@@ -13,7 +15,11 @@ const EditArticle = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/article/${id}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/article/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(response => response.json())
       .then(data => {
         setArticle(data);
@@ -23,7 +29,7 @@ const EditArticle = () => {
         console.error('Error fetching article:', error);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, token]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +45,7 @@ const EditArticle = () => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify(article),
     })
