@@ -8,7 +8,8 @@
   width: 250px;
   background-color: #000000;
   color: white;
-  transition: width 0.5s;
+  transition: width 0.4s;
+  overflow-x: hidden;
 }
 
 .sidebar.collapsed {
@@ -22,7 +23,6 @@
 }
 
 .menu-item {
-  color: white;
   text-decoration: none;
   padding: 10px 0;
   display: flex;
@@ -33,7 +33,11 @@
   margin-right: 10px;
 }
 
-/* Override the generated hover effect for menu items of react */
+.menu-item .text {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .ps-menu-button {
   background-color: inherit;
 }
@@ -43,18 +47,23 @@
 }
 
 .menu-item:hover {
-  background-color: inherit;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  
+}
+
+.menu-item:hover .text {
+  opacity: 1;
+}
+
+.sidebar.collapsed .menu-item .text {
+  opacity: 0;
 }
 
 .sidebar nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.sidebar nav ul li:hover {
-  background-color: #ffffff;
-  color: black;
 }
 
 .sidebar nav ul li {

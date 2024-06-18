@@ -1,10 +1,10 @@
 .main-content {
-  margin-left: 115px;
+  margin-left: 250px;
   padding: 20px;
   transition: margin-left 0.5s;
   flex-grow: 1;
 }
 
 .sidebar-collapsed .main-content {
-  margin-left: 40px;
+  margin-left: 60px;
 }
