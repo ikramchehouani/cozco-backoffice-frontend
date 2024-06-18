@@ -3,6 +3,8 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   position: fixed;
   width: 250px;
@@ -49,7 +51,6 @@
 .menu-item:hover {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  
 }
 
 .menu-item:hover .text {
@@ -73,4 +74,10 @@
 .sidebar nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+.menu-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #444;
 }

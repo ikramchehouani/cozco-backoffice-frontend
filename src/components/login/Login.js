@@ -56,10 +56,10 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2>Se connecter</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email:</label>
+          <label>Email</label>
           <input
             type="email"
             value={email}
@@ -68,7 +68,7 @@ const Login = () => {
           />
         </div>
         <div className="form-group">
-          <label>Password:</label>
+          <label>Mot de passe</label>
           <input
             type="password"
             value={password}
@@ -77,7 +77,7 @@ const Login = () => {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit">Se connecter</button>
       </form>
     </div>
   );
