@@ -15,7 +15,7 @@ const Sidebar = ({ collapsed, onToggle }) => {
           <MenuItem className="menu-item" icon={<FaColumns />} href="/admin/dashboard">
             Tableau de bord
           </MenuItem>
-          <MenuItem className="menu-item" icon={<FaUsers />} href="/employees">
+          <MenuItem className="menu-item" icon={<FaUsers />} href="/admin/administrators">
             Administrateurs
           </MenuItem>
           <MenuItem className="menu-item" icon={<FaThList />} href="/admin/articles">

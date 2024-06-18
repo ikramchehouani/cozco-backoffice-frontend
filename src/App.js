@@ -10,6 +10,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import PrivateRoute from './components/privateRoute';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import './App.css';
+import Administrators from './components/administrators/Administrators';
 
 const AppContent = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -29,6 +30,7 @@ const AppContent = () => {
             <PrivateRoute>
               <Routes>
                 <Route path="" element={<Dashboard />} />
+                <Route path="administrators" element={<Administrators />} />
                 <Route path="articles" element={<Articles />} />
                 <Route path="articles/new" element={<AddArticle />} />
                 <Route path="articles/:id" element={<EditArticle />} />
