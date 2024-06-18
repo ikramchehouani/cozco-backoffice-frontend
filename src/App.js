@@ -23,7 +23,7 @@ const AppContent = () => {
       <div className="main-content">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/admin/*" element={
             <PrivateRoute>
               <Routes>
