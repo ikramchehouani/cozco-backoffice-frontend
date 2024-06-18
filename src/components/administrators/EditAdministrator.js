@@ -81,7 +81,8 @@ const EditAdministrator = () => {
           />
           <br />
           <label>Prénom</label>
-          <textarea
+          <input
+            type="text"
             name="firstName"
             value={administrator.firstName}
             onChange={handleInputChange}

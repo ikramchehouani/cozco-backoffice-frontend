@@ -47,6 +47,15 @@ const AddAdministrator = () => {
     <div className="edit-form">
       <h2>Ajouter utilisateur</h2>
       <form onSubmit={handleFormSubmit}>
+        <label>Nom</label>
+        <input
+          type="text"
+          name="lastName"
+          value={administrator.firstName}
+          onChange={handleInputChange}
+          required
+        />
+        <br />
         <label>Prénom</label>
         <input
           type="text"
@@ -55,15 +64,6 @@ const AddAdministrator = () => {
           onChange={handleInputChange}
           required
         />
-        <br />
-        <label>Nom</label>
-        <textarea
-          name="lastName"
-          value={administrator.lastName}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
         <label>Email</label>
         <input
           type="text"
